@@ -177,7 +177,7 @@ const PuzzleTrainer = () => {
                   </span>
                   <span className="badge" style={{ 
                     background: 'rgba(255, 152, 0, 0.2)',
-                    color: '#ff9800',
+                    color: '#ffffff',
                     border: '1px solid rgba(255, 152, 0, 0.3)'
                   }}>
                     Difficulty: {currentPuzzle.difficulty}
@@ -212,7 +212,7 @@ const PuzzleTrainer = () => {
                     <span style={{ fontSize: '24px' }}>
                       {feedback.type === 'success' ? '✓' : '✗'}
                     </span>
-                    <span style={{ color: feedback.type === 'success' ? '#4caf50' : '#f44336' }}>
+                    <span style={{ color: feedback.type === 'success' ? '#4caf50' : '#cccccc' }}>
                       {feedback.message}
                     </span>
                   </div>
@@ -225,7 +225,7 @@ const PuzzleTrainer = () => {
                   <h4 style={{ fontSize: '18px', marginBottom: '16px' }}>Your Stats</h4>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#e94560' }}>
+                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff' }}>
                         {stats.puzzlesSolved}
                       </div>
                       <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -233,7 +233,7 @@ const PuzzleTrainer = () => {
                       </div>
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#4caf50' }}>
+                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff' }}>
                         {Math.round(stats.accuracy * 100)}%
                       </div>
                       <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -241,7 +241,7 @@ const PuzzleTrainer = () => {
                       </div>
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#ff9800' }}>
+                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff' }}>
                         {stats.currentStreak}
                       </div>
                       <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>

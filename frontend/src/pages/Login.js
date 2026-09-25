@@ -48,7 +48,7 @@ const Login = () => {
             padding: '16px',
             background: 'rgba(244, 67, 54, 0.1)',
             border: '1px solid rgba(244, 67, 54, 0.3)',
-            color: '#f44336',
+            color: '#ffffff',
             fontSize: '14px'
           }}>
             {error}
@@ -89,7 +89,7 @@ const Login = () => {
         <div style={{ textAlign: 'center', marginTop: '24px' }}>
           <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
             Don't have an account?{' '}
-            <Link to="/register" style={{ color: '#e94560', textDecoration: 'none' }}>
+            <Link to="/register" style={{ color: '#ffffff', textDecoration: 'none' }}>
               Sign up
             </Link>
           </p>

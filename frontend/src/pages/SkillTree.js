@@ -25,12 +25,12 @@ const SkillTree = () => {
   }, []);
 
   const skillCategories = [
-    { id: 'foundations', name: 'Foundations', icon: '♔', color: '#4caf50', description: 'Essential chess fundamentals' },
-    { id: 'openings', name: 'Openings', icon: '♕', color: '#2196f3', description: 'Opening theory and repertoire' },
-    { id: 'tactics', name: 'Tactics', icon: '♘', color: '#ff9800', description: 'Tactical patterns and combinations' },
-    { id: 'middlegame', name: 'Middlegame', icon: '♗', color: '#9c27b0', description: 'Strategic planning and piece coordination' },
-    { id: 'endgames', name: 'Endgames', icon: '♖', color: '#f44336', description: 'Endgame technique and conversion' },
-    { id: 'advanced', name: 'Advanced', icon: '♚', color: '#795548', description: 'Advanced concepts and master-level play' }
+    { id: 'foundations', name: 'Foundations', icon: '♔', color: '#3a3a3a', description: 'Essential chess fundamentals' },
+    { id: 'openings', name: 'Openings', icon: '♕', color: '#4a4a4a', description: 'Opening theory and repertoire' },
+    { id: 'tactics', name: 'Tactics', icon: '♘', color: '#5a5a5a', description: 'Tactical patterns and combinations' },
+    { id: 'middlegame', name: 'Middlegame', icon: '♗', color: '#6a6a6a', description: 'Strategic planning and piece coordination' },
+    { id: 'endgames', name: 'Endgames', icon: '♖', color: '#2a2a2a', description: 'Endgame technique and conversion' },
+    { id: 'advanced', name: 'Advanced', icon: '♚', color: '#7a7a7a', description: 'Advanced concepts and master-level play' }
   ];
 
   const getCoursesByCategory = (categoryId) => {
@@ -167,7 +167,7 @@ const SkillTree = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             fontSize: '14px',
-                            color: isCompleted ? '#4caf50' : 'rgba(255, 255, 255, 0.6)'
+                            color: isCompleted ? '#ffffff' : 'rgba(255, 255, 255, 0.6)'
                           }}>
                             {isCompleted ? '✓' : '○'}
                           </div>
@@ -210,7 +210,7 @@ const SkillTree = () => {
           <h3 style={{ fontSize: '24px', marginBottom: '24px' }}>Overall Progress</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
             <div>
-              <div style={{ fontSize: '36px', fontWeight: '700', color: '#e94560', marginBottom: '8px' }}>
+              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
                 {user?.stats?.coursesCompleted || 0}
               </div>
               <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -218,7 +218,7 @@ const SkillTree = () => {
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '36px', fontWeight: '700', color: '#4caf50', marginBottom: '8px' }}>
+              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
                 {user?.stats?.puzzlesSolved || 0}
               </div>
               <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -226,7 +226,7 @@ const SkillTree = () => {
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ff9800', marginBottom: '8px' }}>
+              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
                 {user?.rating || 1200}
               </div>
               <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -234,7 +234,7 @@ const SkillTree = () => {
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '36px', fontWeight: '700', color: '#2196f3', marginBottom: '8px' }}>
+              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
                 {user?.level || 'beginner'}
               </div>
               <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>

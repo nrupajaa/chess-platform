@@ -50,11 +50,11 @@ const Puzzles = () => {
 
   const getDifficultyColor = (difficulty) => {
     const colors = {
-      1: '#4caf50',
-      2: '#8bc34a',
-      3: '#ffc107',
-      4: '#ff9800',
-      5: '#f44336'
+      1: '#4a4a4a',
+      2: '#5a5a5a',
+      3: '#5a5a5a',
+      4: '#6a6a6a',
+      5: '#2a2a2a'
     };
     return colors[difficulty] || '#666';
   };

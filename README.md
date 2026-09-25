@@ -1,6 +1,6 @@
-# Chess Learning Platform
+# Boardwise - Chess Learning Platform
 
-A comprehensive chess learning platform with structured courses, interactive puzzles, skill trees, and opening repertoire management. Built with React, Node.js, Express, and MongoDB.
+Boardwise is a comprehensive chess learning platform with structured courses, interactive puzzles, skill trees, and opening repertoire management. Built with React, Node.js, Express, and MongoDB.
 
 ## 🎯 Features
 

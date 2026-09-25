@@ -70,12 +70,12 @@ const CourseDetail = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      foundations: '#4caf50',
-      openings: '#2196f3',
-      tactics: '#ff9800',
-      middlegame: '#9c27b0',
-      endgames: '#f44336',
-      advanced: '#795548'
+      foundations: '#3a3a3a',
+      openings: '#4a4a4a',
+      tactics: '#5a5a5a',
+      middlegame: '#6a6a6a',
+      endgames: '#2a2a2a',
+      advanced: '#7a7a7a'
     };
     return colors[category] || '#666';
   };
@@ -158,7 +158,7 @@ const CourseDetail = () => {
               <div>
                 <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>Rating</span>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <span style={{ color: '#ffc107' }}>★</span>
+                  <span style={{ color: '#ffffff' }}>★</span>
                   <span style={{ fontSize: '16px', fontWeight: '600' }}>
                     {course.rating?.toFixed(1) || '4.5'}
                   </span>
@@ -176,8 +176,8 @@ const CourseDetail = () => {
             ) : (
               <div className="card" style={{ padding: '16px', background: 'rgba(76, 175, 80, 0.1)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ color: '#4caf50', fontSize: '24px' }}>✓</span>
-                  <span style={{ color: '#4caf50', fontWeight: '600' }}>Enrolled</span>
+                  <span style={{ color: '#ffffff', fontSize: '24px' }}>✓</span>
+                  <span style={{ color: '#ffffff', fontWeight: '600' }}>Enrolled</span>
                 </div>
                 <div style={{ marginTop: '8px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
@@ -215,8 +215,8 @@ const CourseDetail = () => {
                 borderRadius: '8px',
                 marginBottom: '12px',
                 cursor: 'pointer',
-                background: selectedLesson === lesson ? 'rgba(233, 69, 96, 0.1)' : 'rgba(255, 255, 255, 0.05)',
-                border: selectedLesson === lesson ? '1px solid rgba(233, 69, 96, 0.3)' : '1px solid transparent',
+                background: selectedLesson === lesson ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.05)',
+                border: selectedLesson === lesson ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid transparent',
                 transition: 'all 0.3s ease'
               }}
             >
@@ -230,7 +230,7 @@ const CourseDetail = () => {
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontSize: '14px',
-                  color: lesson.completed ? '#4caf50' : 'rgba(255, 255, 255, 0.6)'
+                  color: lesson.completed ? '#ffffff' : 'rgba(255, 255, 255, 0.6)'
                 }}>
                   {lesson.completed ? '✓' : index + 1}
                 </div>
@@ -278,7 +278,7 @@ const CourseDetail = () => {
                   background: 'rgba(76, 175, 80, 0.1)',
                   display: 'inline-block'
                 }}>
-                  <span style={{ color: '#4caf50' }}>✓ Completed</span>
+                  <span style={{ color: '#ffffff' }}>✓ Completed</span>
                 </div>
               )}
             </>

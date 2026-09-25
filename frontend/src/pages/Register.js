@@ -62,7 +62,7 @@ const Register = () => {
             padding: '16px',
             background: 'rgba(244, 67, 54, 0.1)',
             border: '1px solid rgba(244, 67, 54, 0.3)',
-            color: '#f44336',
+            color: '#ffffff',
             fontSize: '14px'
           }}>
             {error}
@@ -76,7 +76,7 @@ const Register = () => {
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="chessmaster123"
+              placeholder="boardwise123"
               required
               minLength="3"
             />
@@ -136,7 +136,7 @@ const Register = () => {
         <div style={{ textAlign: 'center', marginTop: '24px' }}>
           <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
             Already have an account?{' '}
-            <Link to="/login" style={{ color: '#e94560', textDecoration: 'none' }}>
+            <Link to="/login" style={{ color: '#ffffff', textDecoration: 'none' }}>
               Login
             </Link>
           </p>

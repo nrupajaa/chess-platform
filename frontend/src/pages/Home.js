@@ -32,12 +32,12 @@ const Home = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      foundations: '#4caf50',
-      openings: '#2196f3',
-      tactics: '#ff9800',
-      middlegame: '#9c27b0',
-      endgames: '#f44336',
-      advanced: '#795548'
+      foundations: '#3a3a3a',
+      openings: '#4a4a4a',
+      tactics: '#5a5a5a',
+      middlegame: '#6a6a6a',
+      endgames: '#2a2a2a',
+      advanced: '#7a7a7a'
     };
     return colors[category] || '#666';
   };
@@ -56,7 +56,7 @@ const Home = () => {
       <section className="hero" style={{ 
         padding: '80px 0', 
         textAlign: 'center',
-        background: 'linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.2) 100%)',
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%)',
         borderRadius: '0 0 32px 32px',
         marginBottom: '60px'
       }}>
@@ -64,7 +64,7 @@ const Home = () => {
           <h1 style={{ 
             fontSize: '48px', 
             marginBottom: '20px',
-            background: 'linear-gradient(135deg, #e94560, #ff6b6b)',
+            background: 'linear-gradient(135deg, #1a1a1a, #333333)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
@@ -162,7 +162,7 @@ const Home = () => {
                       {course.lessons?.length || 0} lessons
                     </span>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <span style={{ color: '#ffc107' }}>★</span>
+                      <span style={{ color: '#ffffff' }}>★</span>
                       <span style={{ fontSize: '14px', fontWeight: '600' }}>
                         {course.rating?.toFixed(1) || '4.5'}
                       </span>
@@ -184,7 +184,7 @@ const Home = () => {
       <section className="features" style={{ marginBottom: '80px' }}>
         <div className="container">
           <h2 style={{ fontSize: '36px', marginBottom: '40px', textAlign: 'center' }}>
-            Why Choose ChessMaster?
+            Why Choose Boardwise?
           </h2>
           <div style={{ 
             display: 'grid', 
@@ -220,7 +220,7 @@ const Home = () => {
       <section className="cta" style={{ 
         padding: '60px 0', 
         textAlign: 'center',
-        background: 'linear-gradient(135deg, rgba(233, 69, 96, 0.2) 0%, rgba(15, 52, 96, 0.3) 100%)',
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.3) 100%)',
         borderRadius: '32px',
         marginBottom: '60px'
       }}>

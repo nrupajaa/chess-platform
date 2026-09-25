@@ -1,5 +1,5 @@
 {
-  "name": "chess-learning-platform",
+  "name": "boardwise-chess-platform",
   "version": "1.0.0",
   "description": "A comprehensive chess learning platform with courses, puzzles, and skill trees",
   "main": "index.js",

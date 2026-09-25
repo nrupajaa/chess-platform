@@ -61,12 +61,12 @@ const Courses = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      foundations: '#4caf50',
-      openings: '#2196f3',
-      tactics: '#ff9800',
-      middlegame: '#9c27b0',
-      endgames: '#f44336',
-      advanced: '#795548'
+      foundations: '#3a3a3a',
+      openings: '#4a4a4a',
+      tactics: '#5a5a5a',
+      middlegame: '#6a6a6a',
+      endgames: '#2a2a2a',
+      advanced: '#7a7a7a'
     };
     return colors[category] || '#666';
   };
@@ -204,7 +204,7 @@ const Courses = () => {
                     </span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <span style={{ color: '#ffc107' }}>★</span>
+                    <span style={{ color: '#ffffff' }}>★</span>
                     <span style={{ fontSize: '14px', fontWeight: '600' }}>
                       {course.rating?.toFixed(1) || '4.5'}
                     </span>

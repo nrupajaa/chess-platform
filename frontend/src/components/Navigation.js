@@ -18,7 +18,7 @@ const Navigation = () => {
     <nav>
       <div className="container">
         <Link to="/" className="logo">
-          ♔ ChessMaster
+          ♔ Boardwise
         </Link>
         <ul className="nav-links">
           {navLinks.map((link) => (

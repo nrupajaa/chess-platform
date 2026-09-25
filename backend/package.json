@@ -1,5 +1,5 @@
 {
-  "name": "chess-platform-backend",
+  "name": "boardwise-backend",
   "version": "1.0.0",
   "description": "Backend for Chess Learning Platform",
   "main": "server.js",

@@ -82,7 +82,7 @@ const Profile = () => {
               width: '120px',
               height: '120px',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #e94560, #ff6b6b)',
+              background: 'linear-gradient(135deg, #1a1a1a, #333333)',
               margin: '0 auto 16px',
               display: 'flex',
               alignItems: 'center',
@@ -103,7 +103,7 @@ const Profile = () => {
             </h4>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
               <div className="card" style={{ padding: '16px', textAlign: 'center', background: 'rgba(255, 255, 255, 0.03)' }}>
-                <div style={{ fontSize: '24px', fontWeight: '700', color: '#e94560', marginBottom: '4px' }}>
+                <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>
                   {displayUser.stats?.puzzlesSolved || 0}
                 </div>
                 <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -111,7 +111,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className="card" style={{ padding: '16px', textAlign: 'center', background: 'rgba(255, 255, 255, 0.03)' }}>
-                <div style={{ fontSize: '24px', fontWeight: '700', color: '#4caf50', marginBottom: '4px' }}>
+                <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>
                   {Math.round((displayUser.stats?.puzzlesAccuracy || 0) * 100)}%
                 </div>
                 <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -119,7 +119,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className="card" style={{ padding: '16px', textAlign: 'center', background: 'rgba(255, 255, 255, 0.03)' }}>
-                <div style={{ fontSize: '24px', fontWeight: '700', color: '#ff9800', marginBottom: '4px' }}>
+                <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>
                   {displayUser.stats?.currentStreak || 0}
                 </div>
                 <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -127,7 +127,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className="card" style={{ padding: '16px', textAlign: 'center', background: 'rgba(255, 255, 255, 0.03)' }}>
-                <div style={{ fontSize: '24px', fontWeight: '700', color: '#2196f3', marginBottom: '4px' }}>
+                <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>
                   {displayUser.stats?.coursesCompleted || 0}
                 </div>
                 <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -142,7 +142,7 @@ const Profile = () => {
               Rating
             </h4>
             <div className="card" style={{ padding: '20px', textAlign: 'center', background: 'rgba(255, 255, 255, 0.03)' }}>
-              <div style={{ fontSize: '48px', fontWeight: '700', color: '#e94560', marginBottom: '8px' }}>
+              <div style={{ fontSize: '48px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
                 {displayUser.rating || 1200}
               </div>
               <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
@@ -242,7 +242,7 @@ const Profile = () => {
                       {displayUser.completedPaths.map((path, index) => (
                         <span key={index} className="badge" style={{ 
                           background: 'rgba(76, 175, 80, 0.2)',
-                          color: '#4caf50',
+                          color: '#ffffff',
                           border: '1px solid rgba(76, 175, 80, 0.3)',
                           marginRight: '8px',
                           marginBottom: '8px'
@@ -269,8 +269,8 @@ const Profile = () => {
                     gap: '16px',
                     padding: '16px',
                     borderRadius: '8px',
-                    background: player._id === displayUser._id ? 'rgba(233, 69, 96, 0.1)' : 'rgba(255, 255, 255, 0.03)',
-                    border: player._id === displayUser._id ? '1px solid rgba(233, 69, 96, 0.3)' : '1px solid rgba(255, 255, 255, 0.1)'
+                    background: player._id === displayUser._id ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.03)',
+                    border: player._id === displayUser._id ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid rgba(255, 255, 255, 0.1)'
                   }}>
                     <div style={{
                       width: '32px',
@@ -294,7 +294,7 @@ const Profile = () => {
                         {player.stats?.puzzlesSolved || 0} puzzles solved
                       </div>
                     </div>
-                    <div style={{ fontSize: '20px', fontWeight: '700', color: '#e94560' }}>
+                    <div style={{ fontSize: '20px', fontWeight: '700', color: '#ffffff' }}>
                       {player.rating}
                     </div>
                   </div>
