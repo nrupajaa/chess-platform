@@ -2,6 +2,8 @@
 
 Boardwise is a chess learning platform with structured courses, interactive puzzles, a skill tree, and opening repertoire management. Built with React, Node.js, Express, and MongoDB.
 
+Live Demo: https://chess-platform-nrupajaa.vercel.app/
+
 ## Features
 
 - User authentication with student and instructor roles (JWT)
