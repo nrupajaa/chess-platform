@@ -1,3 +1,4 @@
+require('dns').setServers(['8.8.8.8', '1.1.1.1']);
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
 // MongoDB Connection
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/chess-platform', {
   useNewUrlParser: true,
   useUnifiedTopology: true

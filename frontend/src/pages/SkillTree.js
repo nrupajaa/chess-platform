@@ -25,12 +25,12 @@ const SkillTree = () => {
   }, []);
 
   const skillCategories = [
-    { id: 'foundations', name: 'Foundations', icon: '♔', color: '#3a3a3a', description: 'Essential chess fundamentals' },
-    { id: 'openings', name: 'Openings', icon: '♕', color: '#4a4a4a', description: 'Opening theory and repertoire' },
-    { id: 'tactics', name: 'Tactics', icon: '♘', color: '#5a5a5a', description: 'Tactical patterns and combinations' },
-    { id: 'middlegame', name: 'Middlegame', icon: '♗', color: '#6a6a6a', description: 'Strategic planning and piece coordination' },
-    { id: 'endgames', name: 'Endgames', icon: '♖', color: '#2a2a2a', description: 'Endgame technique and conversion' },
-    { id: 'advanced', name: 'Advanced', icon: '♚', color: '#7a7a7a', description: 'Advanced concepts and master-level play' }
+    { id: 'foundations', name: 'Foundations', icon: '♔', color: '#B8860B', description: 'Essential chess fundamentals' },
+    { id: 'openings', name: 'Openings', icon: '♕', color: '#9C7A1E', description: 'Opening theory and repertoire' },
+    { id: 'tactics', name: 'Tactics', icon: '♘', color: '#A67C00', description: 'Tactical patterns and combinations' },
+    { id: 'middlegame', name: 'Middlegame', icon: '♗', color: '#C9A24B', description: 'Strategic planning and piece coordination' },
+    { id: 'endgames', name: 'Endgames', icon: '♖', color: '#8B6914', description: 'Endgame technique and conversion' },
+    { id: 'advanced', name: 'Advanced', icon: '♚', color: '#7A5C10', description: 'Advanced concepts and master-level play' }
   ];
 
   const getCoursesByCategory = (categoryId) => {
@@ -71,7 +71,7 @@ const SkillTree = () => {
         <h1 style={{ fontSize: '48px', marginBottom: '16px' }}>
           Your Chess Skill Tree
         </h1>
-        <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.7)', maxWidth: '600px', margin: '0 auto' }}>
+        <p style={{ fontSize: '18px', color: 'rgba(26, 26, 26, 0.75)', maxWidth: '600px', margin: '0 auto' }}>
           Follow a structured learning path from foundations to advanced concepts. 
           Complete courses to unlock new skills and track your progress.
         </p>
@@ -92,7 +92,7 @@ const SkillTree = () => {
                 gap: '16px',
                 marginBottom: '24px',
                 paddingBottom: '16px',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+                borderBottom: '1px solid rgba(26, 26, 26, 0.1)'
               }}>
                 <div style={{
                   width: '64px',
@@ -109,7 +109,7 @@ const SkillTree = () => {
                 </div>
                 <div style={{ flex: 1 }}>
                   <h3 style={{ fontSize: '24px', marginBottom: '4px' }}>{category.name}</h3>
-                  <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                  <p style={{ fontSize: '14px', color: 'rgba(26, 26, 26, 0.65)' }}>
                     {category.description}
                   </p>
                 </div>
@@ -118,10 +118,10 @@ const SkillTree = () => {
               {/* Progress Bar */}
               <div style={{ marginBottom: '24px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                  <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                     Progress
                   </span>
-                  <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.8)' }}>
+                  <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.85)' }}>
                     {Math.round(progress)}%
                   </span>
                 </div>
@@ -151,8 +151,8 @@ const SkillTree = () => {
                         <div style={{
                           padding: '16px',
                           borderRadius: '8px',
-                          background: isCompleted ? 'rgba(76, 175, 80, 0.1)' : 'rgba(255, 255, 255, 0.05)',
-                          border: isCompleted ? '1px solid rgba(76, 175, 80, 0.3)' : '1px solid rgba(255, 255, 255, 0.1)',
+                          background: isCompleted ? 'rgba(76, 175, 80, 0.1)' : 'rgba(212, 169, 79, 0.08)',
+                          border: isCompleted ? '1px solid rgba(76, 175, 80, 0.3)' : '1px solid rgba(26, 26, 26, 0.1)',
                           transition: 'all 0.3s ease',
                           display: 'flex',
                           alignItems: 'center',
@@ -162,12 +162,12 @@ const SkillTree = () => {
                             width: '32px',
                             height: '32px',
                             borderRadius: '50%',
-                            background: isCompleted ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255, 255, 255, 0.1)',
+                            background: isCompleted ? 'rgba(76, 175, 80, 0.2)' : 'rgba(212, 169, 79, 0.18)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             fontSize: '14px',
-                            color: isCompleted ? '#ffffff' : 'rgba(255, 255, 255, 0.6)'
+                            color: isCompleted ? '#1a1a1a' : 'rgba(26, 26, 26, 0.65)'
                           }}>
                             {isCompleted ? '✓' : '○'}
                           </div>
@@ -179,7 +179,7 @@ const SkillTree = () => {
                               <span className={`badge badge-${course.level}`} style={{ fontSize: '10px' }}>
                                 {getLevelBadge(course.level)}
                               </span>
-                              <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.5)' }}>
+                              <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.55)' }}>
                                 {course.lessons?.length || 0} lessons
                               </span>
                             </div>
@@ -193,7 +193,7 @@ const SkillTree = () => {
                 <div style={{ 
                   textAlign: 'center', 
                   padding: '32px',
-                  color: 'rgba(255, 255, 255, 0.5)',
+                  color: 'rgba(26, 26, 26, 0.55)',
                   fontSize: '14px'
                 }}>
                   No courses available in this category yet
@@ -210,34 +210,34 @@ const SkillTree = () => {
           <h3 style={{ fontSize: '24px', marginBottom: '24px' }}>Overall Progress</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
             <div>
-              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
+              <div style={{ fontSize: '36px', fontWeight: '700', color: '#1a1a1a', marginBottom: '8px' }}>
                 {user?.stats?.coursesCompleted || 0}
               </div>
-              <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
+              <div style={{ fontSize: '14px', color: 'rgba(26, 26, 26, 0.65)' }}>
                 Courses Completed
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
+              <div style={{ fontSize: '36px', fontWeight: '700', color: '#1a1a1a', marginBottom: '8px' }}>
                 {user?.stats?.puzzlesSolved || 0}
               </div>
-              <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
+              <div style={{ fontSize: '14px', color: 'rgba(26, 26, 26, 0.65)' }}>
                 Puzzles Solved
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
+              <div style={{ fontSize: '36px', fontWeight: '700', color: '#1a1a1a', marginBottom: '8px' }}>
                 {user?.rating || 1200}
               </div>
-              <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
+              <div style={{ fontSize: '14px', color: 'rgba(26, 26, 26, 0.65)' }}>
                 Current Rating
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
+              <div style={{ fontSize: '36px', fontWeight: '700', color: '#1a1a1a', marginBottom: '8px' }}>
                 {user?.level || 'beginner'}
               </div>
-              <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
+              <div style={{ fontSize: '14px', color: 'rgba(26, 26, 26, 0.65)' }}>
                 Skill Level
               </div>
             </div>

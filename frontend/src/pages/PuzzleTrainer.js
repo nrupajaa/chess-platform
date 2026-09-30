@@ -151,7 +151,7 @@ const PuzzleTrainer = () => {
               boardWidth={400}
               customBoardStyle={{
                 borderRadius: '8px',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
+                boxShadow: '0 8px 32px rgba(120, 90, 20, 0.25)'
               }}
               customDarkSquareStyle={{ backgroundColor: '#769656' }}
               customLightSquareStyle={{ backgroundColor: '#eeeed2' }}
@@ -169,33 +169,33 @@ const PuzzleTrainer = () => {
                 </h3>
                 <div style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
                   <span className="badge" style={{ 
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'rgba(255, 255, 255, 0.8)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)'
+                    background: 'rgba(212, 169, 79, 0.18)',
+                    color: 'rgba(26, 26, 26, 0.85)',
+                    border: '1px solid rgba(212, 169, 79, 0.5)'
                   }}>
                     {currentPuzzle.category}
                   </span>
                   <span className="badge" style={{ 
                     background: 'rgba(255, 152, 0, 0.2)',
-                    color: '#ffffff',
+                    color: '#1a1a1a',
                     border: '1px solid rgba(255, 152, 0, 0.3)'
                   }}>
                     Difficulty: {currentPuzzle.difficulty}
                   </span>
                 </div>
-                <p style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '16px' }}>
+                <p style={{ color: 'rgba(26, 26, 26, 0.75)', marginBottom: '16px' }}>
                   Find the best move for {game.turn() === 'w' ? 'White' : 'Black'}
                 </p>
                 <div style={{ 
                   display: 'flex', 
                   justifyContent: 'space-between',
                   paddingTop: '16px',
-                  borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+                  borderTop: '1px solid rgba(26, 26, 26, 0.1)'
                 }}>
-                  <span style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                  <span style={{ fontSize: '14px', color: 'rgba(26, 26, 26, 0.65)' }}>
                     Move {moveIndex + 1} of {currentPuzzle.solution.length}
                   </span>
-                  <span style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                  <span style={{ fontSize: '14px', color: 'rgba(26, 26, 26, 0.65)' }}>
                     Rating: {currentPuzzle.rating}
                   </span>
                 </div>
@@ -212,7 +212,7 @@ const PuzzleTrainer = () => {
                     <span style={{ fontSize: '24px' }}>
                       {feedback.type === 'success' ? '✓' : '✗'}
                     </span>
-                    <span style={{ color: feedback.type === 'success' ? '#4caf50' : '#cccccc' }}>
+                    <span style={{ color: feedback.type === 'success' ? '#2e7d32' : '#1a1a1a' }}>
                       {feedback.message}
                     </span>
                   </div>
@@ -225,26 +225,26 @@ const PuzzleTrainer = () => {
                   <h4 style={{ fontSize: '18px', marginBottom: '16px' }}>Your Stats</h4>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff' }}>
+                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#1a1a1a' }}>
                         {stats.puzzlesSolved}
                       </div>
-                      <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                      <div style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                         Solved
                       </div>
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff' }}>
+                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#1a1a1a' }}>
                         {Math.round(stats.accuracy * 100)}%
                       </div>
-                      <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                      <div style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                         Accuracy
                       </div>
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff' }}>
+                      <div style={{ fontSize: '24px', fontWeight: '700', color: '#1a1a1a' }}>
                         {stats.currentStreak}
                       </div>
-                      <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                      <div style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                         Streak
                       </div>
                     </div>
@@ -264,7 +264,7 @@ const PuzzleTrainer = () => {
 
           {!currentPuzzle && (
             <div className="card" style={{ textAlign: 'center', padding: '40px' }}>
-              <p style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+              <p style={{ color: 'rgba(26, 26, 26, 0.65)' }}>
                 No puzzles available
               </p>
             </div>

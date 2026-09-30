@@ -70,14 +70,14 @@ const CourseDetail = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      foundations: '#3a3a3a',
-      openings: '#4a4a4a',
-      tactics: '#5a5a5a',
-      middlegame: '#6a6a6a',
-      endgames: '#2a2a2a',
-      advanced: '#7a7a7a'
+      foundations: '#B8860B',
+      openings: '#9C7A1E',
+      tactics: '#A67C00',
+      middlegame: '#C9A24B',
+      endgames: '#8B6914',
+      advanced: '#7A5C10'
     };
-    return colors[category] || '#666';
+    return colors[category] || '#B8860B';
   };
 
   if (loading) {
@@ -129,9 +129,9 @@ const CourseDetail = () => {
                 {getLevelBadge(course.level)}
               </span>
               <span className="badge" style={{ 
-                background: 'rgba(255, 255, 255, 0.1)',
-                color: 'rgba(255, 255, 255, 0.8)',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
+                background: 'rgba(212, 169, 79, 0.18)',
+                color: 'rgba(26, 26, 26, 0.85)',
+                border: '1px solid rgba(212, 169, 79, 0.5)'
               }}>
                 {course.category}
               </span>
@@ -139,26 +139,26 @@ const CourseDetail = () => {
             <h1 style={{ fontSize: '32px', marginBottom: '16px' }}>
               {course.title}
             </h1>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '24px', lineHeight: '1.6' }}>
+            <p style={{ color: 'rgba(26, 26, 26, 0.75)', marginBottom: '24px', lineHeight: '1.6' }}>
               {course.description}
             </p>
             <div style={{ display: 'flex', gap: '24px', marginBottom: '24px' }}>
               <div>
-                <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>Instructor</span>
+                <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>Instructor</span>
                 <div style={{ fontSize: '16px', fontWeight: '600' }}>{course.instructor}</div>
               </div>
               <div>
-                <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>Duration</span>
+                <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>Duration</span>
                 <div style={{ fontSize: '16px', fontWeight: '600' }}>{course.duration}</div>
               </div>
               <div>
-                <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>Lessons</span>
+                <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>Lessons</span>
                 <div style={{ fontSize: '16px', fontWeight: '600' }}>{course.lessons?.length || 0}</div>
               </div>
               <div>
-                <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>Rating</span>
+                <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>Rating</span>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <span style={{ color: '#ffffff' }}>★</span>
+                  <span style={{ color: '#B8860B' }}>★</span>
                   <span style={{ fontSize: '16px', fontWeight: '600' }}>
                     {course.rating?.toFixed(1) || '4.5'}
                   </span>
@@ -176,15 +176,15 @@ const CourseDetail = () => {
             ) : (
               <div className="card" style={{ padding: '16px', background: 'rgba(76, 175, 80, 0.1)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ color: '#ffffff', fontSize: '24px' }}>✓</span>
-                  <span style={{ color: '#ffffff', fontWeight: '600' }}>Enrolled</span>
+                  <span style={{ color: '#B8860B', fontSize: '24px' }}>✓</span>
+                  <span style={{ color: '#1a1a1a', fontWeight: '600' }}>Enrolled</span>
                 </div>
                 <div style={{ marginTop: '8px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                    <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                       Progress
                     </span>
-                    <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.8)' }}>
+                    <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.85)' }}>
                       {Math.round(progress)}%
                     </span>
                   </div>
@@ -215,8 +215,8 @@ const CourseDetail = () => {
                 borderRadius: '8px',
                 marginBottom: '12px',
                 cursor: 'pointer',
-                background: selectedLesson === lesson ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.05)',
-                border: selectedLesson === lesson ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid transparent',
+                background: selectedLesson === lesson ? 'rgba(212, 169, 79, 0.18)' : 'rgba(212, 169, 79, 0.08)',
+                border: selectedLesson === lesson ? '1px solid rgba(212, 169, 79, 0.7)' : '1px solid transparent',
                 transition: 'all 0.3s ease'
               }}
             >
@@ -225,12 +225,12 @@ const CourseDetail = () => {
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
-                  background: lesson.completed ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255, 255, 255, 0.1)',
+                  background: lesson.completed ? 'rgba(76, 175, 80, 0.2)' : 'rgba(212, 169, 79, 0.18)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontSize: '14px',
-                  color: lesson.completed ? '#ffffff' : 'rgba(255, 255, 255, 0.6)'
+                  color: lesson.completed ? '#1a1a1a' : 'rgba(26, 26, 26, 0.65)'
                 }}>
                   {lesson.completed ? '✓' : index + 1}
                 </div>
@@ -238,7 +238,7 @@ const CourseDetail = () => {
                   <div style={{ fontSize: '14px', fontWeight: '500', marginBottom: '4px' }}>
                     {lesson.title}
                   </div>
-                  <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.5)' }}>
+                  <div style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.55)' }}>
                     {lesson.duration}
                   </div>
                 </div>
@@ -257,10 +257,10 @@ const CourseDetail = () => {
               <div style={{ 
                 marginBottom: '24px',
                 padding: '16px',
-                background: 'rgba(255, 255, 255, 0.05)',
+                background: 'rgba(212, 169, 79, 0.08)',
                 borderRadius: '8px',
                 lineHeight: '1.8',
-                color: 'rgba(255, 255, 255, 0.9)'
+                color: 'rgba(26, 26, 26, 0.95)'
               }}>
                 {selectedLesson.content}
               </div>
@@ -278,12 +278,12 @@ const CourseDetail = () => {
                   background: 'rgba(76, 175, 80, 0.1)',
                   display: 'inline-block'
                 }}>
-                  <span style={{ color: '#ffffff' }}>✓ Completed</span>
+                  <span style={{ color: '#1a1a1a' }}>✓ Completed</span>
                 </div>
               )}
             </>
           ) : (
-            <div style={{ textAlign: 'center', padding: '40px', color: 'rgba(255, 255, 255, 0.6)' }}>
+            <div style={{ textAlign: 'center', padding: '40px', color: 'rgba(26, 26, 26, 0.65)' }}>
               Select a lesson to view its content
             </div>
           )}

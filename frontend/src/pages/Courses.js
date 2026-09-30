@@ -61,14 +61,14 @@ const Courses = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      foundations: '#3a3a3a',
-      openings: '#4a4a4a',
-      tactics: '#5a5a5a',
-      middlegame: '#6a6a6a',
-      endgames: '#2a2a2a',
-      advanced: '#7a7a7a'
+      foundations: '#B8860B',
+      openings: '#9C7A1E',
+      tactics: '#A67C00',
+      middlegame: '#C9A24B',
+      endgames: '#8B6914',
+      advanced: '#7A5C10'
     };
-    return colors[category] || '#666';
+    return colors[category] || '#B8860B';
   };
 
   if (loading) {
@@ -130,7 +130,7 @@ const Courses = () => {
       {/* Course Grid */}
       {filteredCourses.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-          <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.6)' }}>
+          <p style={{ fontSize: '18px', color: 'rgba(26, 26, 26, 0.65)' }}>
             No courses found matching your filters.
           </p>
         </div>
@@ -166,18 +166,18 @@ const Courses = () => {
                       {getLevelBadge(course.level)}
                     </span>
                     <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      color: 'rgba(255, 255, 255, 0.8)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)'
+                      background: 'rgba(212, 169, 79, 0.18)',
+                      color: 'rgba(26, 26, 26, 0.85)',
+                      border: '1px solid rgba(212, 169, 79, 0.5)'
                     }}>
                       {course.category}
                     </span>
                   </div>
-                  <h3 style={{ fontSize: '22px', marginBottom: '12px', color: 'white' }}>
+                  <h3 style={{ fontSize: '22px', marginBottom: '12px', color: '#1a1a1a' }}>
                     {course.title}
                   </h3>
                   <p style={{ 
-                    color: 'rgba(255, 255, 255, 0.6)', 
+                    color: 'rgba(26, 26, 26, 0.65)', 
                     fontSize: '14px',
                     marginBottom: '16px',
                     display: '-webkit-box',
@@ -193,18 +193,18 @@ const Courses = () => {
                   justifyContent: 'space-between', 
                   alignItems: 'center',
                   paddingTop: '16px',
-                  borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+                  borderTop: '1px solid rgba(26, 26, 26, 0.1)'
                 }}>
                   <div>
-                    <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)', marginRight: '16px' }}>
+                    <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)', marginRight: '16px' }}>
                       {course.lessons?.length || 0} lessons
                     </span>
-                    <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                    <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                       {course.duration}
                     </span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <span style={{ color: '#ffffff' }}>★</span>
+                    <span style={{ color: '#B8860B' }}>★</span>
                     <span style={{ fontSize: '14px', fontWeight: '600' }}>
                       {course.rating?.toFixed(1) || '4.5'}
                     </span>

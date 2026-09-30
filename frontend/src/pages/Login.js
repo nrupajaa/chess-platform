@@ -37,7 +37,7 @@ const Login = () => {
       <div className="card" style={{ maxWidth: '400px', width: '100%' }}>
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <h1 style={{ fontSize: '32px', marginBottom: '8px' }}>Welcome Back</h1>
-          <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+          <p style={{ color: 'rgba(26, 26, 26, 0.75)' }}>
             Login to continue your chess journey
           </p>
         </div>
@@ -48,7 +48,7 @@ const Login = () => {
             padding: '16px',
             background: 'rgba(244, 67, 54, 0.1)',
             border: '1px solid rgba(244, 67, 54, 0.3)',
-            color: '#ffffff',
+            color: '#1a1a1a',
             fontSize: '14px'
           }}>
             {error}
@@ -87,9 +87,9 @@ const Login = () => {
         </form>
 
         <div style={{ textAlign: 'center', marginTop: '24px' }}>
-          <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+          <p style={{ color: 'rgba(26, 26, 26, 0.75)' }}>
             Don't have an account?{' '}
-            <Link to="/register" style={{ color: '#ffffff', textDecoration: 'none' }}>
+            <Link to="/register" style={{ color: '#1a1a1a', fontWeight: '600', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
               Sign up
             </Link>
           </p>

@@ -18,7 +18,7 @@ const Navigation = () => {
     <nav>
       <div className="container">
         <Link to="/" className="logo">
-          ♔ Boardwise
+          <span style={{ color: '#B8860B' }}>♞</span> Boardwise
         </Link>
         <ul className="nav-links">
           {navLinks.map((link) => (

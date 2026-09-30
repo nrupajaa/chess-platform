@@ -7,6 +7,7 @@ import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
 import Puzzles from './pages/Puzzles';
 import PuzzleTrainer from './pages/PuzzleTrainer';
+import Play from './pages/Play';
 import Repertoire from './pages/Repertoire';
 import Profile from './pages/Profile';
 import Login from './pages/Login';
@@ -27,6 +28,7 @@ function App() {
               <Route path="/courses/:id" element={<CourseDetail />} />
               <Route path="/puzzles" element={<Puzzles />} />
               <Route path="/puzzles/trainer" element={<PuzzleTrainer />} />
+              <Route path="/play" element={<Play />} />
               <Route path="/repertoire" element={<Repertoire />} />
               <Route path="/skill-tree" element={<SkillTree />} />
               <Route path="/profile" element={<Profile />} />

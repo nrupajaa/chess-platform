@@ -95,7 +95,7 @@ const Repertoire = () => {
     return (
       <div className="container" style={{ textAlign: 'center', padding: '60px 20px' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '16px' }}>Opening Repertoire Builder</h2>
-        <p style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '32px' }}>
+        <p style={{ color: 'rgba(26, 26, 26, 0.75)', marginBottom: '32px' }}>
           Please login to build your opening repertoire
         </p>
         <button className="btn btn-primary">Login to Continue</button>
@@ -166,9 +166,9 @@ const Repertoire = () => {
       {/* Repertoires List */}
       {repertoires.length === 0 ? (
         <div className="card" style={{ textAlign: 'center', padding: '60px' }}>
-          <div style={{ fontSize: '48px', marginBottom: '16px' }}>📚</div>
+          <div style={{ fontSize: '48px', marginBottom: '16px', color: '#B8860B' }}>♗</div>
           <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>No Repertoires Yet</h3>
-          <p style={{ color: 'rgba(255, 255, 255, 0.6)', marginBottom: '24px' }}>
+          <p style={{ color: 'rgba(26, 26, 26, 0.65)', marginBottom: '24px' }}>
             Create your first opening repertoire to start organizing your chess openings
           </p>
         </div>
@@ -182,19 +182,19 @@ const Repertoire = () => {
                 alignItems: 'center',
                 marginBottom: '24px',
                 paddingBottom: '16px',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+                borderBottom: '1px solid rgba(26, 26, 26, 0.1)'
               }}>
                 <div>
                   <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>{repertoire.name}</h3>
                   <div style={{ display: 'flex', gap: '12px' }}>
                     <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      color: 'rgba(255, 255, 255, 0.8)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)'
+                      background: 'rgba(212, 169, 79, 0.18)',
+                      color: 'rgba(26, 26, 26, 0.85)',
+                      border: '1px solid rgba(212, 169, 79, 0.5)'
                     }}>
                       {repertoire.color}
                     </span>
-                    <span style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                    <span style={{ fontSize: '14px', color: 'rgba(26, 26, 26, 0.65)' }}>
                       {repertoire.openings?.length || 0} openings
                     </span>
                   </div>
@@ -212,7 +212,7 @@ const Repertoire = () => {
 
               {/* Add Opening Form */}
               {showAddOpening && selectedRepertoire?._id === repertoire._id && (
-                <div className="card" style={{ marginBottom: '24px', background: 'rgba(255, 255, 255, 0.03)' }}>
+                <div className="card" style={{ marginBottom: '24px', background: 'rgba(212, 169, 79, 0.08)' }}>
                   <h4 style={{ fontSize: '18px', marginBottom: '16px' }}>Add New Opening</h4>
                   <form onSubmit={handleAddOpening}>
                     <div className="form-group">
@@ -276,8 +276,8 @@ const Repertoire = () => {
                   {repertoire.openings.map((opening, index) => (
                     <div key={index} className="card" style={{ 
                       padding: '20px',
-                      background: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid rgba(255, 255, 255, 0.1)'
+                      background: 'rgba(212, 169, 79, 0.08)',
+                      border: '1px solid rgba(26, 26, 26, 0.1)'
                     }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
                         <div style={{ flex: 1 }}>
@@ -285,9 +285,9 @@ const Repertoire = () => {
                             <h4 style={{ fontSize: '18px' }}>{opening.name}</h4>
                             {opening.eco && (
                               <span className="badge" style={{ 
-                                background: 'rgba(255, 255, 255, 0.1)',
-                                color: 'rgba(255, 255, 255, 0.8)',
-                                border: '1px solid rgba(255, 255, 255, 0.2)'
+                                background: 'rgba(212, 169, 79, 0.18)',
+                                color: 'rgba(26, 26, 26, 0.85)',
+                                border: '1px solid rgba(212, 169, 79, 0.5)'
                               }}>
                                 {opening.eco}
                               </span>
@@ -298,7 +298,7 @@ const Repertoire = () => {
                           </div>
                           {opening.moves && opening.moves.length > 0 && (
                             <div style={{ marginBottom: '12px' }}>
-                              <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)', marginRight: '8px' }}>
+                              <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)', marginRight: '8px' }}>
                                 Moves:
                               </span>
                               <span style={{ fontSize: '14px', fontFamily: 'monospace' }}>
@@ -309,14 +309,14 @@ const Repertoire = () => {
                           {opening.description && (
                             <p style={{ 
                               fontSize: '14px', 
-                              color: 'rgba(255, 255, 255, 0.7)',
+                              color: 'rgba(26, 26, 26, 0.75)',
                               marginBottom: '12px'
                             }}>
                               {opening.description}
                             </p>
                           )}
                           <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                            <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                            <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                               Mastery:
                             </span>
                             <select
@@ -324,10 +324,10 @@ const Repertoire = () => {
                               onChange={(e) => handleUpdateOpening(repertoire._id, opening._id || index, e.target.value)}
                               style={{ 
                                 padding: '4px 8px',
-                                background: 'rgba(255, 255, 255, 0.1)',
-                                border: '1px solid rgba(255, 255, 255, 0.2)',
+                                background: 'rgba(212, 169, 79, 0.18)',
+                                border: '1px solid rgba(212, 169, 79, 0.5)',
                                 borderRadius: '4px',
-                                color: 'white',
+                                color: '#1a1a1a',
                                 fontSize: '12px'
                               }}
                             >
@@ -342,7 +342,7 @@ const Repertoire = () => {
                           style={{
                             background: 'none',
                             border: 'none',
-                            color: '#ffffff',
+                            color: '#1a1a1a',
                             cursor: 'pointer',
                             fontSize: '18px',
                             padding: '8px'
@@ -358,7 +358,7 @@ const Repertoire = () => {
                 <div style={{ 
                   textAlign: 'center', 
                   padding: '32px',
-                  color: 'rgba(255, 255, 255, 0.5)',
+                  color: 'rgba(26, 26, 26, 0.55)',
                   fontSize: '14px'
                 }}>
                   No openings added yet. Click "Add Opening" to start building your repertoire.

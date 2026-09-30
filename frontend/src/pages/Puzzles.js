@@ -50,13 +50,13 @@ const Puzzles = () => {
 
   const getDifficultyColor = (difficulty) => {
     const colors = {
-      1: '#4a4a4a',
-      2: '#5a5a5a',
-      3: '#5a5a5a',
-      4: '#6a6a6a',
-      5: '#2a2a2a'
+      1: '#9C7A1E',
+      2: '#A67C00',
+      3: '#A67C00',
+      4: '#C9A24B',
+      5: '#8B6914'
     };
-    return colors[difficulty] || '#666';
+    return colors[difficulty] || '#B8860B';
   };
 
   const getCategoryIcon = (category) => {
@@ -131,7 +131,7 @@ const Puzzles = () => {
       {/* Puzzle Grid */}
       {filteredPuzzles.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-          <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.6)' }}>
+          <p style={{ fontSize: '18px', color: 'rgba(26, 26, 26, 0.65)' }}>
             No puzzles found matching your filters.
           </p>
         </div>
@@ -165,15 +165,15 @@ const Puzzles = () => {
                     Difficulty: {puzzle.difficulty}
                   </span>
                   <span className="badge" style={{ 
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'rgba(255, 255, 255, 0.8)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    background: 'rgba(212, 169, 79, 0.18)',
+                    color: 'rgba(26, 26, 26, 0.85)',
+                    border: '1px solid rgba(212, 169, 79, 0.5)',
                     marginLeft: '8px'
                   }}>
                     {puzzle.category}
                   </span>
                 </div>
-                <h3 style={{ fontSize: '18px', marginBottom: '8px', color: 'white' }}>
+                <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#1a1a1a' }}>
                   {puzzle.theme}
                 </h3>
                 <div style={{ 
@@ -182,12 +182,12 @@ const Puzzles = () => {
                   alignItems: 'center',
                   marginTop: '16px',
                   paddingTop: '16px',
-                  borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+                  borderTop: '1px solid rgba(26, 26, 26, 0.1)'
                 }}>
-                  <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                  <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                     Rating: {puzzle.rating}
                   </span>
-                  <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                  <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                     {puzzle.attempts} attempts
                   </span>
                 </div>

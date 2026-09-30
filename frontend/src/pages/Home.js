@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Chessboard } from 'react-chessboard';
 import { getCourses } from '../services/api';
 
 const Home = () => {
@@ -32,14 +33,14 @@ const Home = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      foundations: '#3a3a3a',
-      openings: '#4a4a4a',
-      tactics: '#5a5a5a',
-      middlegame: '#6a6a6a',
-      endgames: '#2a2a2a',
-      advanced: '#7a7a7a'
+      foundations: '#B8860B',
+      openings: '#9C7A1E',
+      tactics: '#A67C00',
+      middlegame: '#C9A24B',
+      endgames: '#8B6914',
+      advanced: '#7A5C10'
     };
-    return colors[category] || '#666';
+    return colors[category] || '#B8860B';
   };
 
   if (loading) {
@@ -55,40 +56,83 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero" style={{ 
         padding: '80px 0', 
-        textAlign: 'center',
-        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%)',
+        background: 'linear-gradient(135deg, #FFF8E1 0%, #F5E3A8 100%)',
         borderRadius: '0 0 32px 32px',
-        marginBottom: '60px'
+        marginBottom: '40px'
       }}>
-        <div className="container">
-          <h1 style={{ 
-            fontSize: '48px', 
-            marginBottom: '20px',
-            background: 'linear-gradient(135deg, #1a1a1a, #333333)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
-            Master Chess with Structured Learning
-          </h1>
-          <p style={{ 
-            fontSize: '18px', 
-            color: 'rgba(255, 255, 255, 0.8)',
-            marginBottom: '40px',
-            maxWidth: '600px',
-            margin: '0 auto 40px'
-          }}>
-            Follow guided learning paths, solve puzzles, study openings, and track your progress. 
-            Your journey from beginner to master starts here.
-          </p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-            <Link to="/courses" className="btn btn-primary">
-              Explore Courses
-            </Link>
-            <Link to="/skill-tree" className="btn btn-secondary">
-              View Skill Tree
-            </Link>
+        <div className="container" style={{ 
+          display: 'grid', 
+          gridTemplateColumns: '1.1fr 0.9fr', 
+          gap: '48px', 
+          alignItems: 'center' 
+        }}>
+          {/* Left: text */}
+          <div style={{ textAlign: 'left' }}>
+            <h1 style={{ 
+              fontSize: '48px', 
+              fontWeight: '700',
+              marginBottom: '20px',
+              color: '#1a1a1a'
+            }}>
+              Master Chess with Structured Learning
+            </h1>
+            <p style={{ 
+              fontSize: '18px', 
+              color: 'rgba(26, 26, 26, 0.7)',
+              marginBottom: '40px',
+              maxWidth: '520px'
+            }}>
+              Follow guided learning paths, solve puzzles, study openings, and track your progress. 
+              Your journey from beginner to master starts here.
+            </p>
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <Link to="/courses" className="btn btn-primary">
+                Explore Courses
+              </Link>
+              <Link to="/skill-tree" className="btn btn-secondary">
+                View Skill Tree
+              </Link>
+            </div>
           </div>
+
+          {/* Right: clickable mini chessboard -> /play */}
+          <Link 
+            to="/play" 
+            style={{ textDecoration: 'none', justifySelf: 'center' }}
+            title="Play chess against yourself"
+          >
+            <div
+              className="mini-board-link"
+              style={{
+                width: '320px',
+                borderRadius: '8px',
+                overflow: 'hidden',
+                boxShadow: '0 12px 32px rgba(60, 35, 10, 0.35)',
+                border: '4px solid #3E2611',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                cursor: 'pointer'
+              }}
+            >
+              <Chessboard
+                id="home-preview-board"
+                position="start"
+                arePiecesDraggable={false}
+                boardWidth={312}
+                animationDuration={0}
+                customBoardStyle={{ borderRadius: '0' }}
+                customDarkSquareStyle={{ backgroundColor: '#8B5A2B' }}
+                customLightSquareStyle={{ backgroundColor: '#EBCB9B' }}
+              />
+            </div>
+            <p style={{ 
+              textAlign: 'center', 
+              marginTop: '16px', 
+              fontWeight: '600', 
+              color: '#B8860B' 
+            }}>
+              ▸ Play Both Sides
+            </p>
+          </Link>
         </div>
       </section>
 
@@ -129,18 +173,18 @@ const Home = () => {
                         {getLevelBadge(course.level)}
                       </span>
                       <span className="badge" style={{ 
-                        background: 'rgba(255, 255, 255, 0.1)',
-                        color: 'rgba(255, 255, 255, 0.8)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)'
+                        background: 'rgba(212, 169, 79, 0.18)',
+                        color: 'rgba(26, 26, 26, 0.85)',
+                        border: '1px solid rgba(212, 169, 79, 0.5)'
                       }}>
                         {course.category}
                       </span>
                     </div>
-                    <h3 style={{ fontSize: '20px', marginBottom: '8px', color: 'white' }}>
+                    <h3 style={{ fontSize: '20px', marginBottom: '8px', color: '#1a1a1a' }}>
                       {course.title}
                     </h3>
                     <p style={{ 
-                      color: 'rgba(255, 255, 255, 0.6)', 
+                      color: 'rgba(26, 26, 26, 0.65)', 
                       fontSize: '14px',
                       marginBottom: '16px',
                       display: '-webkit-box',
@@ -156,13 +200,13 @@ const Home = () => {
                     justifyContent: 'space-between', 
                     alignItems: 'center',
                     paddingTop: '16px',
-                    borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+                    borderTop: '1px solid rgba(26, 26, 26, 0.1)'
                   }}>
-                    <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+                    <span style={{ fontSize: '12px', color: 'rgba(26, 26, 26, 0.65)' }}>
                       {course.lessons?.length || 0} lessons
                     </span>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <span style={{ color: '#ffffff' }}>★</span>
+                      <span style={{ color: '#B8860B' }}>★</span>
                       <span style={{ fontSize: '14px', fontWeight: '600' }}>
                         {course.rating?.toFixed(1) || '4.5'}
                       </span>
@@ -192,23 +236,23 @@ const Home = () => {
             gap: '32px' 
           }}>
             <div className="card" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '48px', marginBottom: '16px' }}>🌳</div>
+              <div style={{ fontSize: '48px', marginBottom: '16px', color: '#B8860B' }}>♙</div>
               <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>Skill Tree Learning</h3>
-              <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+              <p style={{ color: 'rgba(26, 26, 26, 0.75)' }}>
                 Follow a structured path from foundations to advanced concepts. Unlock new topics as you progress.
               </p>
             </div>
             <div className="card" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '48px', marginBottom: '16px' }}>🧩</div>
+              <div style={{ fontSize: '48px', marginBottom: '16px', color: '#B8860B' }}>♘</div>
               <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>Smart Puzzle Trainer</h3>
-              <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+              <p style={{ color: 'rgba(26, 26, 26, 0.75)' }}>
                 Practice with spaced repetition. Failed puzzles appear more often to reinforce learning.
               </p>
             </div>
             <div className="card" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '48px', marginBottom: '16px' }}>📚</div>
+              <div style={{ fontSize: '48px', marginBottom: '16px', color: '#B8860B' }}>♗</div>
               <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>Opening Repertoire</h3>
-              <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+              <p style={{ color: 'rgba(26, 26, 26, 0.75)' }}>
                 Build and organize your personal opening repertoire with linked lessons and example games.
               </p>
             </div>
@@ -220,7 +264,7 @@ const Home = () => {
       <section className="cta" style={{ 
         padding: '60px 0', 
         textAlign: 'center',
-        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.3) 100%)',
+        background: 'linear-gradient(135deg, #FBEFC5 0%, #EBCB7A 100%)',
         borderRadius: '32px',
         marginBottom: '60px'
       }}>
@@ -228,8 +272,8 @@ const Home = () => {
           <h2 style={{ fontSize: '32px', marginBottom: '16px' }}>
             Ready to Improve Your Chess?
           </h2>
-          <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.8)', marginBottom: '32px' }}>
-            Join thousands of players learning chess the structured way
+          <p style={{ fontSize: '18px', color: 'rgba(26, 26, 26, 0.85)', marginBottom: '32px' }}>
+            Join players learning chess the structured way
           </p>
           <Link to="/register" className="btn btn-primary">
             Get Started Free
