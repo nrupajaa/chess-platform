@@ -22,7 +22,7 @@ Boardwise is a chess learning platform with structured courses, interactive puzz
 1. Clone the repository and install dependencies:
 
 ```bash
-   git clone https://github.com/nrupajaa/chess-platform.git
+   git clone https://github.com/username/chess-platform.git
    cd chess-platform
    cd backend && npm install
    cd ../frontend && npm install
